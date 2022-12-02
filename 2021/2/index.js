@@ -8,25 +8,22 @@ input.forEach((line, i) => {
   commands[i] = { command, value };
 });
 
-let aim = 0 
-let hor = 0 
-let dep = 0
+let aim = 0;
+let hor = 0;
+let dep = 0;
 commands.forEach((command, i) => {
-  console.log(command , i );
+  console.log(command, i);
   let c = parseInt(command.value);
   if (command.command == "up") {
-    aim -= c
-  }
-  else if (command.command == "down") {
-    aim += c
-  }
-  else if (command.command == "forward") {
-    hor += c
-    dep += aim * c 
+    aim -= c;
+  } else if (command.command == "down") {
+    aim += c;
+  } else if (command.command == "forward") {
+    hor += c;
+    dep += aim * c;
 
-
-// It increases your horizontal position by X units.
-// It increases your depth by your aim multiplied by X.
+    // It increases your horizontal position by X units.
+    // It increases your depth by your aim multiplied by X.
   }
 });
-console.log(hor * dep)
+console.log(hor * dep);
