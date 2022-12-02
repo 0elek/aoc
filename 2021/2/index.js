@@ -12,7 +12,6 @@ let aim = 0;
 let hor = 0;
 let dep = 0;
 commands.forEach((command, i) => {
-  console.log(command, i);
   let c = parseInt(command.value);
   if (command.command == "up") {
     aim -= c;
