@@ -1,8 +1,6 @@
-echo "Enter the year: "
-read year
+read -p "Enter the year: " year 
 
-echo "Enter the day: "
-read day
+read -p "Enter the day: " day 
 
 if [ $year -eq $(date +%Y) ]; then
     mkdir $day
